@@ -1,0 +1,98 @@
+@import '../variables';
+
+.avatar {
+  %background-square {
+    background-color: $black;
+    border-radius: 2px;
+    display: inline-block;
+    position: relative;
+    text-align: center;
+    left: 5%;
+
+    &.updating {
+      .image-square {
+        width: 0;
+        height: 0;
+      }
+
+      .initials-square {
+        overflow: hidden;
+        width: 0;
+        height: 0;
+        opacity: 0;
+      }
+    }
+
+    .image-square {
+      @extend %image-square;
+    }
+
+    .initials-square {
+      @extend %initials-square;
+
+      .initials {
+        @extend %initials;
+      }
+    }
+  }
+
+  %image-square {
+    background-position: center center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    border-radius: 2px;
+    border-color: $white;
+    height: 95%;
+    width: 95%;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    display: inline-block;
+    transition: 1500ms;
+  }
+
+  %initials-square {
+    background-color: $grey;
+    border-radius: 2px;
+    color: $white;
+    display: inline-block;
+    height: 93.5%;
+    left: 50%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    width: 93.5%;
+    opacity: 1;
+    transition: 1500ms;
+  }
+
+  %initials {
+    left: 50%;
+    position: absolute;;
+    top: 50%;
+    transform: translate(-50%, -50%);
+  }
+
+  .background-square1 {
+    @extend %background-square;
+    height: 25vh;
+    width: 25vh;
+    transition-timing-function: linear;
+    position: relative;
+    left: 4%;
+  }
+
+  .background-square2 {
+    @extend %background-square;
+    height: 20vh;
+    width: 20vh;
+  }
+
+  .background-square3 {
+    @extend %background-square;
+    height: 15vh;
+    width: 15vh;
+    left: 6%;
+  }
+}
