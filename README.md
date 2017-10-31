@@ -1,4 +1,4 @@
-**This app show a react app for swapping pictures on a page using an animation. 
+**This app shows an animation for swapping pictures used for a top 3 ranking. 
 **
 ## Use on localhost: ##
 1. npm install
